@@ -1563,18 +1563,6 @@ nav {
 
 }
 
-.profile__img {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 8px; /* coins légèrement arrondis mais forme carrée */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  margin-bottom: 1rem;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 
 
 
@@ -1582,3 +1570,55 @@ nav {
     
 
 
+@media screen and (max-width: 576px) {
+  .home__container,
+  .about__container,
+  .projects__container,
+  .contact__container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .home__image,
+  .about__image {
+    width: 100%;
+    max-width: 250px;
+    margin-inline: auto;
+  }
+
+  .home__social {
+    position: static;
+    margin-top: 1rem;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .projects__card {
+    padding: 1rem;
+  }
+
+  .about__buttons,
+  .contact__social-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .home__description {
+    font-size: var(--normal-font-size);
+    padding-inline: 1rem;
+  }
+
+  .home__scroll {
+    margin-top: 2rem;
+  }
+
+  .services__container {
+    grid-template-columns: 1fr;
+  }
+
+  .profile__img {
+    width: 120px;
+    height: 120px;
+  }
+}
